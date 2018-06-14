@@ -9,3 +9,14 @@ get "/students" do
   @students = Student.all()
   erb(:index)
 end
+
+# NEW
+get "/students/new" do
+  erb(:new)
+end
+
+# SHOW
+get "/students/:id" do
+  @student = Student.find(params[:id].to_i())
+  erb(:show)
+end
