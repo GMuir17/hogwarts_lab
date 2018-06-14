@@ -2,7 +2,7 @@ require_relative("../db/sql_runner.rb")
 
 class Student
 
-  attr_reader(:id, :first_name, :last_name, :house, :age)
+  attr_reader(:id, :first_name, :last_name, :house, :age, :slogan)
 
   def initialize(options)
     @id = options["id"].to_i()
@@ -10,15 +10,16 @@ class Student
     @last_name = options["last_name"]
     @house = options["house"]
     @age = options["age"].to_i()
+    @slogan = options["slogan"]
   end
 
 
   def save()
     sql = "INSERT INTO students
-          (first_name, last_name, house, age)
-          VALUES ($1, $2, $3, $4)
+          (first_name, last_name, house, age, slogan)
+          VALUES ($1, $2, $3, $4, $5)
           RETURNING id"
-    values = [@first_name, @last_name, @house, @age]
+    values = [@first_name, @last_name, @house, @age, @slogan]
     student_data = SqlRunner.run(sql, values)
     @id = student_data.first()["id"].to_i()
   end

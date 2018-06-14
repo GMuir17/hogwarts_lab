@@ -5,5 +5,6 @@ CREATE TABLE students (
   first_name VARCHAR(255),
   last_name VARCHAR(255),
   house VARCHAR(255),
-  age INT4
+  age INT4,
+  slogan VARCHAR(255)
 );

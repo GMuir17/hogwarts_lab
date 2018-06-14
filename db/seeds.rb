@@ -7,18 +7,20 @@ student1 = Student.new({
     "first_name" => "Harry",
     "last_name" => "Potter",
     "house" => "Gryffindor",
-    "age" => 11
+    "age" => 11,
+    "slogan" => "For the love of life!"
 })
 
 student2 = Student.new({
     "first_name" => "Ron",
     "last_name" => "Weasley",
     "house" => "Gryffindor",
-    "age" => 11
+    "age" => 11,
+    "slogan" => "We lose together!"
 })
 
 student1.save()
 student2.save()
 
-binding.pry
-nil
+# binding.pry
+# nil
