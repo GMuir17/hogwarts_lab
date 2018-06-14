@@ -1,7 +1,19 @@
 require_relative("../models/student.rb")
+require_relative("../models/house.rb")
 require("pry")
 
+House.delete_all()
 Student.delete_all()
+
+house1 = House.new({
+    "name" => "Gryffindor",
+    "logo" => "https://goo.gl/images/5T7vJF"
+  })
+
+house2 = House.new({
+    "name" => "Ravenclaw",
+    "logo" => "https://goo.gl/images/GbTaw5"
+  })
 
 student1 = Student.new({
     "first_name" => "Harry",
