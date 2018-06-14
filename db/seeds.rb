@@ -15,10 +15,14 @@ house2 = House.new({
     "logo" => "https://goo.gl/images/GbTaw5"
   })
 
+
+  house1.save()
+  house2.save()
+
 student1 = Student.new({
     "first_name" => "Harry",
     "last_name" => "Potter",
-    "house" => "Gryffindor",
+    "house_id" => house1.id,
     "age" => 11,
     "slogan" => "For the love of life!"
 })
@@ -26,13 +30,10 @@ student1 = Student.new({
 student2 = Student.new({
     "first_name" => "Ron",
     "last_name" => "Weasley",
-    "house" => "Gryffindor",
+    "house" => house1.id,
     "age" => 11,
     "slogan" => "We lose together!"
 })
-
-house1.save()
-house2.save()
 
 student1.save()
 student2.save()
