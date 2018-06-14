@@ -31,8 +31,11 @@ student2 = Student.new({
     "slogan" => "We lose together!"
 })
 
+house1.save()
+house2.save()
+
 student1.save()
 student2.save()
 
-# binding.pry
-# nil
+binding.pry
+nil
