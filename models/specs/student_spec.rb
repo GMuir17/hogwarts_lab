@@ -9,7 +9,7 @@ class StudentTest < MiniTest::Test
       "first_name" => "Harry",
       "last_name" => "Potter",
       "house" => "Gryffindor",
-      "age" => 12
+      "age" => 11
     }
     @student = Student.new(options)
   end
