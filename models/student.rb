@@ -38,8 +38,8 @@ class Student
   def self.find(id)
     sql = "SELECT * FROM students WHERE id = $1;"
     values = [id]
-    student = SqlRunner.run(sql, values).first()
-    result = Student.new(student)
+    student_hash = SqlRunner.run(sql, values).first()
+    result = Student.new(student_hash)
     return result
   end
 
